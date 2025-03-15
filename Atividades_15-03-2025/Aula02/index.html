@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2</title>
+</head>
+<body>
+    <h2>Lista não ordenada (ul):</h2>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+    
+    <h2>Lista ordenada (ol):</h2>
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ol>
+    <form id="signupForm" name="signupForm">
+        <label for="username">Nome de usuário: </label>
+        <input type="text" id="username" name="username">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+
+        <label for="tos">Aceita os termos de serviço: </label>
+        <input type="checkbox" name="accepts_tos" id="tos">
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <table border=1>
+        <thead>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td>João</td>
+                <td>25</td>
+                <td>joao@email.com</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>30</td>
+                <td>maria@email.com</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- 
+        AVISO!!!
+        Essa parte de adicionar os usuários no banco de dados 
+        foi eu que fiz e não falaram nada sobre isso no curso!!
+    -->
+    
+    <h2>Usuários:</h2>
+    <ul id="user-list">
+        
+    </ul>
+
+    <script>
+        var form = document.getElementById('signupForm');
+        form.onsubmit = function(event){
+            var formData = new FormData(form);
+            var json = JSON.stringify(Object.fromEntries(formData));
+            
+            fetch("http://localhost/WindyAPI/createUser",
+            {
+                body: json,
+                content_type: "application/json",
+                method: "post"
+            }).then((data) => {return data});
+        }
+
+        fetch("http://localhost:/WindyAPI/getUsers",
+            {
+                
+            }).then((response) => {
+                const data = response.json();
+                console.log(data.then((result) => {
+                    console.log(result)
+                    let user_list = document.getElementById("user-list");
+                    for (let i = 1; i <= Object.keys(result).length; i++) {
+                        console.log(Object(result[i])["username"]);
+                        user_list.innerHTML += "<li>#</li>".replace("#", Object(result[i])["username"]);
+                    }
+
+                }))
+            });
+    
+
+    </script>
+</body>
+</html>

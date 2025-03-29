@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Login</title>
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <h3>LW</h3>
+            </div>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-items">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/register.html">Cadastrar</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="content"> 
+        <div class="login-screen column-row">
+            <div class="column">
+                <h1>Bem vindo ao meu primeiro projeto</h1>
+        
+                <form action="http://localhost/WindyAPI/api/get-user-token" target="_blank" method="POST" id="login-form">
+                    <div class="input-row">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="input-row">
+                        <label for="password">Senha:</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+            <div class="column">
+                <img class="medium-img" src="assets/login-img.svg">
+            </div>
+        </div>
+    
+    </main>
+    <div class="footer">
+
+    </div>
+</body>
+</html>

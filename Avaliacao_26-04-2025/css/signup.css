@@ -1,0 +1,19 @@
+body {
+    background-color: var(--main-color);
+}
+
+form {
+    background-color: #fff;
+}
+
+.navbar {
+    padding: 20px;
+}
+
+.signup-div {
+    margin: auto;
+}
+
+button[type="submit"] {
+    margin-top: 70px;
+}

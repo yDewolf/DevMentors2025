@@ -1,24 +1,16 @@
 .login-title {
     margin-bottom: 30px;
     h2 {
+        font-size: xx-large;
         font-weight: 600;
         margin-bottom: 0;
     }
 
     p {
+        color: var(--light-secondary-color);
         margin-top: 0;
         font-weight: 300;
-        font-size: small;
-    }
-}
-
-.form-signup {
-    margin: 30px auto;
-    text-align: center;
-    font-size: small;
-
-    a {
-        text-decoration: none;
+        font-size: medium;
     }
 }
 

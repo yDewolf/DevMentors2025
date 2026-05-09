@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="/stylesh1t/style/basic.css">
+    <link rel="stylesheet" href="public/style/landing_page.css">
+    <base href="./Prova_09-05-2026">
+</head>
+<body>
+    <header>
+        <div id="navbar" class="navbar margin-to-center">
+            <div class="nav column-row">
+                <div class="left nav-left">
+                    <span class="text-logo">DevStream</span>
+                </div>
+                <ul class="navbar-nav nav-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Filmes & Shows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Suporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Assinatura</a>
+                    </li>
+                </ul>
+                <div class="right nav-right">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img class="nav-icon" src="public/assets/icons/search.svg" alt="Pesquisar">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img class="nav-icon" src="public/assets/icons/bell.svg" alt="Notificações">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-page-background" id="landing-page-background"></div>
+    <main class="main-content margin-to-center">
+        <div class="main-logo">
+            <img src="public/assets/img/logo.svg" alt="DevMenthors">
+        </div>
+        <div class="column first-content">
+            <h1>A melhor experiência do Streamen</h1>
+            <p>DevStream é a experiência de streaming definitiva, conectando você ao que há de melhor em entretenimento e inovação. Assista aos seus filmes e séries favoritos sob demanda, a qualquer hora e em qualquer lugar, e tenha acesso a conteúdo exclusivo de desenvolvedores (Devs). Com DevStream, você não apenas consome, mas faz parte do universo digital, criando suas próprias listas de exibição para nunca perder um lançamento.</p>
+            <button class="play-now-button">
+                <span class="icon-span">
+                    <img src="public/assets/icons/play-button.svg" alt="">
+                </span>
+                <span>
+                    Comece a Assistir Agora
+                </span>
+            </button>
+        </div>
+    </main>
+    <script>
+        const mainPageBackground = document.getElementById("landing-page-background");
+        addBackgroundImages(35);
+        function addBackgroundImages(count) {
+            for (let idx = 1; idx < count; idx++) {
+                let img = document.createElement("img");
+                img.setAttribute("src", `public/assets/movies/Image-${idx}.png`)
+                mainPageBackground.appendChild(img);
+            }
+        }
+    </script>
+</body>
+</html>

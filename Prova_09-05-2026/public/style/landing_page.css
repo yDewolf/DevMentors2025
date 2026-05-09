@@ -1,0 +1,115 @@
+:root {
+    --main-color: white;
+    --light-main-color: #1A1A1A;   
+    --max-page-size: 1024px;
+    --hpixels-to-centralize: calc((100vw - var(--max-page-size)) / 2);
+}
+* {
+    color: white;
+}
+
+body {
+    background-color: #141414;
+}
+
+.navbar, .nav {
+    height: var(--navbar-height);
+}
+
+.navbar-nav {
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+}
+
+.nav-link {
+    height: fit-content;
+    img {
+        height: fit-content;
+    }
+}
+
+.nav {
+    padding: 15px 40px;
+}
+
+.nav-right, .nav-left {
+    height: fit-content;
+    display: flex;
+}
+
+.main-page-background::before {
+    content: "";
+}
+.main-page-background {
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    overflow: hidden;
+    
+    height: 650px;
+    top: 0;
+
+    img {
+        width: 20vw;
+        max-width: 300px;
+    }
+}
+
+.nav-center {
+    border: solid var(--light-main-color) 2px;
+    background-color: #0F0F0F;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.nav-item {
+    margin: 0;
+
+    height: fit-content;
+}
+
+.main-logo {
+    max-width: 500px;
+    width: 50%;
+    img {
+        width: 100%;
+    }
+
+    margin: auto;
+}
+
+.nav-icon {
+    width: 24px;
+}
+
+.play-now-button {
+    background-color: #0088FF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 18px 24px;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.first-content {
+    margin: 0;
+    width: auto;
+    align-items: center;
+    
+    h1 {
+        font-weight: 700;
+    }
+    p {
+        color: #999999;
+    }
+}
+
+@media screen and (max-width=1024px) {
+    main {
+        width: calc(100% - 60px);
+    }
+}

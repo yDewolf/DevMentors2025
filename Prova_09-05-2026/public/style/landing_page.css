@@ -17,6 +17,16 @@ p {
     color: #999999;
 }
 
+h1 {
+    font-weight: 700;
+}   
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
 .column {
     width: auto;
     margin: 0;
@@ -112,10 +122,6 @@ p {
     margin: auto;
     width: 70%;
     align-items: center;
-    
-    h1 {
-        font-weight: 700;
-    }   
 }
 
 .categories {

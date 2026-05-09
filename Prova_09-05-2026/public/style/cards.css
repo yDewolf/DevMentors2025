@@ -1,0 +1,39 @@
+.category-card-holder {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1A1A1A;
+    border: solid 1px #262626;
+
+    align-items: center;    
+    gap: 2px;
+}
+
+.category-card, .category-card-gradient {
+    height: 200px;
+    width: 200px;
+}
+.category-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+    overflow-y: hidden;
+}
+
+.category-card-gradient {
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(#ffffff00,#1A1A1A);
+}
+
+.category-card-movie {
+    padding: 0 4px;
+    img {
+        width: 100%;
+    }
+}
+
+.category-card-actions {
+    width: 100%;
+    justify-content: space-between;
+}

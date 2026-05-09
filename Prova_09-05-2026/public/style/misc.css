@@ -1,0 +1,28 @@
+.progress-holder {
+    gap: 10px;
+    width: 20%;
+    align-items: center;
+}
+
+.progress-step-holder {
+    gap: 8px;
+}
+
+.progress-step-span {
+    background-color: #333333;
+    width: 20px;
+    height: 5px;
+    border-radius: 10px;
+}
+
+.progress-step-span.selected {
+    background-color: #0088FF;
+}
+
+.icon-span {
+    display: flex;
+    align-items: center;
+    img {
+        width: 20px;
+    }
+}

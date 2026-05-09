@@ -9,7 +9,22 @@
 }
 
 body {
+    overflow-x: hidden;
     background-color: #141414;
+}
+
+p {
+    color: #999999;
+}
+
+.column {
+    width: auto;
+    margin: 0;
+}
+
+.column-row {
+    gap: 20px;
+    display: flex;
 }
 
 .navbar, .nav {
@@ -38,23 +53,21 @@ body {
     display: flex;
 }
 
-.main-page-background::before {
-    content: "";
-}
 .main-page-background {
     z-index: -1;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     flex-wrap: wrap;
     position: absolute;
     overflow: hidden;
     
     height: 650px;
     top: 0;
+}
 
-    img {
-        width: 20vw;
-        max-width: 300px;
-    }
+.background-movie-img {
+    padding: 4px;
+    width: 20vw;
 }
 
 .nav-center {
@@ -73,11 +86,11 @@ body {
 .main-logo {
     max-width: 500px;
     width: 50%;
+    margin: auto;
+
     img {
         width: 100%;
     }
-
-    margin: auto;
 }
 
 .nav-icon {
@@ -96,16 +109,21 @@ body {
 }
 
 .first-content {
-    margin: 0;
-    width: auto;
+    margin: auto;
+    width: 70%;
     align-items: center;
     
     h1 {
         font-weight: 700;
-    }
-    p {
-        color: #999999;
-    }
+    }   
+}
+
+.categories {
+    display: flex;
+    overflow-x: scroll;
+
+    gap: 10px;
+    width: 100%;
 }
 
 @media screen and (max-width=1024px) {

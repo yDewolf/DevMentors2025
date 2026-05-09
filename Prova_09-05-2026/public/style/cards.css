@@ -37,3 +37,31 @@
     width: 100%;
     justify-content: space-between;
 }
+
+.device-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.device-card {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: var(--light-main-color);
+    border-radius: 10px;
+}
+
+.device-card-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .icon-span {
+        background-color: #262626;
+        padding: 5px;
+        border-radius: 10px;
+        img {
+            width: 28px;
+        }
+    }
+}
